@@ -1,0 +1,142 @@
+@-webkit-keyframes hamFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hamburger {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: hamFade;
+}
+
+.hamburger1,
+.hamburger2,
+.hamburger3 {
+    background: #000;
+    width: 24px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hamburger1 {
+    top: 4px;
+
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: ham1Rev;
+}
+
+.hamburger2 {
+    top: 11px;
+    -webkit-transform-origin: 50% 50%;
+
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: ham2Rev;
+}
+
+.hamburger3 {
+    top: 18px;
+
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: ham3Rev;
+}
+
+@-webkit-keyframes ham1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        margin-top: 0px;
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+        margin-top: 7px;
+    }
+}
+
+@-webkit-keyframes ham1Rev {
+    0% {
+        -webkit-transform: rotate(45deg);
+        margin-top: 7px;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        margin-top: 0px;
+    }
+}
+
+@-webkit-keyframes ham2 {
+    0% {
+        -webkit-transform: rotateY(0deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotateY(90deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes ham2Rev {
+    0% {
+        -webkit-transform: rotateY(90deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes ham3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        margin-top: 0px;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg);
+        margin-top: -7px;
+    }
+}
+
+@-webkit-keyframes ham3Rev {
+    0% {
+        -webkit-transform: rotate(-45deg);
+        margin-top: -7px;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        margin-top: 0px;
+    }
+}
+
+.hamburger.clicked .hamburger1 {
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: ham1;
+}
+
+.hamburger.clicked .hamburger2 {
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: ham2;
+}
+
+.hamburger.clicked .hamburger3 {
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: ham3;
+}
