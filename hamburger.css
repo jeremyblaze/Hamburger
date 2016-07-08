@@ -30,52 +30,63 @@
     top: 0;
     left: 0;
     right: 0;
+
+    -webkit-animation-duration: 0.25s;
+    -moz-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
 }
 
 .hamburger1 {
     top: 4px;
-
-    -webkit-animation-fill-mode: both;
-    -webkit-animation-duration: 0.5s;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
     -webkit-animation-name: ham1Rev;
+    -moz-animation-name: ham1Rev;
+    animation-name: ham1Rev;
 }
 
 .hamburger2 {
     top: 11px;
     -webkit-transform-origin: 50% 50%;
-
-    -webkit-animation-fill-mode: both;
-    -webkit-animation-duration: 0.5s;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     -webkit-animation-name: ham2Rev;
+    -moz-animation-name: ham2Rev;
+    animation-name: ham2Rev;
 }
 
 .hamburger3 {
     top: 18px;
-
-    -webkit-animation-fill-mode: both;
-    -webkit-animation-duration: 0.5s;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
     -webkit-animation-name: ham3Rev;
+    -moz-animation-name: ham3Rev;
+    animation-name: ham3Rev;
 }
 
 @-webkit-keyframes ham1 {
     0% {
         -webkit-transform: rotate(0deg);
-        margin-top: 0px;
     }
     100% {
-        -webkit-transform: rotate(45deg);
-        margin-top: 7px;
+        -webkit-transform: rotate(45deg) translateY(-4px) translateX(2px);
     }
 }
 
 @-webkit-keyframes ham1Rev {
     0% {
-        -webkit-transform: rotate(45deg);
-        margin-top: 7px;
+        -webkit-transform: rotate(45deg) translateY(-4px) translateX(2px);
     }
     100% {
         -webkit-transform: rotate(0deg);
-        margin-top: 0px;
     }
 }
 
@@ -104,22 +115,18 @@
 @-webkit-keyframes ham3 {
     0% {
         -webkit-transform: rotate(0deg);
-        margin-top: 0px;
     }
     100% {
-        -webkit-transform: rotate(-45deg);
-        margin-top: -7px;
+        -webkit-transform: rotate(-45deg) translateY(3px) translateX(1px);
     }
 }
 
 @-webkit-keyframes ham3Rev {
     0% {
-        -webkit-transform: rotate(-45deg);
-        margin-top: -7px;
+        -webkit-transform: rotate(-45deg) translateY(3px) translateX(1px);
     }
     100% {
         -webkit-transform: rotate(0deg);
-        margin-top: 0px;
     }
 }
 
